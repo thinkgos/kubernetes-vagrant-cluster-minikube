@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network "public_network", bridge: "wlp2s0", adapter: 2, ip: "192.168.166.111" # auto_config: false 
+  config.vm.network "public_network", bridge: "enp1s0", adapter: 2, ip: "172.16.5.190" # auto_config: false 
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -63,9 +63,9 @@ Vagrant.configure("2") do |config|
     # Display the VirtualBox GUI when booting the machine
     # vb.gui = true
   
-    vb.cpus = 2
+    vb.cpus = 4
   # Customize the amount of memory on the VM:
-    vb.memory = 4096
+    vb.memory = 8192
   end
   config.vm.hostname = "kube"
   #

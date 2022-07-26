@@ -31,8 +31,8 @@ chmod a+x /usr/local/bin/minikube
 # kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
 
 # 开启k8s
-# minikube start --driver=none --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --registry-mirror='https://registry.docker-cn.com' --kubernetes-version=v1.23.5 --apiserver-ips="192.168.1.122"
-# minikube start --driver=docker --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --registry-mirror='https://registry.docker-cn.com' --base-image="kicbase/stable:v0.0.30" --kubernetes-version=v1.23.5
+# minikube start --driver=none --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --registry-mirror='https://registry.docker-cn.com' --kubernetes-version=v1.23.9 --apiserver-ips="172.16.5.190"
+# minikube start --driver=docker --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --registry-mirror='https://registry.docker-cn.com' --base-image="kicbase/stable:v0.0.30" --kubernetes-version=v1.23.9
 # 启用 dashboard
 # minikube dashboard
 # 启用ingress
