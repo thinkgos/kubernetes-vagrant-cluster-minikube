@@ -9,6 +9,7 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
+  config.vbguest.installer_options = {allow_kernel_upgrade: true}
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
@@ -42,7 +43,7 @@ Vagrant.configure("2") do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network "public_network", bridge: "enp1s0", adapter: 2, ip: "172.16.5.190" # auto_config: false 
+  config.vm.network "public_network", bridge: "wlp3s0", adapter: 2, ip: "172.16.5.190" # auto_config: false 
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
